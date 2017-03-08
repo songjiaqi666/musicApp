@@ -1,0 +1,46 @@
+<div id="playPage">
+	<img id="playPageBg" src="{{musicJson['al']['picUrl']}}" alt="">
+	<div class="playPageContent">
+		<div class="header">
+			<div>
+				<a ng-click="nowIsPlay()"><i class="fa fa-angle-left"></i></a>
+				<div class="playTitle">
+					<h4>{{musicJson.name}}</h4>
+					<p>{{musicJson['ar'][0].name}}</p>
+				</div>
+			</div>
+			<a class="shareBtn" href="javascript:;"><i class="fa fa-share-square-o"></i></a>
+		</div>
+		<div class="playBody">
+			<div class="stickAndCd">
+				<img ng-style="isPlaying ? '' : {transform: 'rotateZ(-25deg)'}" class="stick" src="image/stick_bg.png" alt="">
+				<div ng-style="isPlaying ? {animation: 'cdRotate 10s infinite linear'} : ''" class="cdWrapper">
+					<div class="coverImg"><img src="{{musicJson['al']['picUrl']}}" alt=""></div>
+				</div>
+			</div>
+			<div class="playControl">
+				<div class="likeDownloadAndComments">
+					<i class="fa fa-heart-o"></i>
+					<i class="fa fa-download"></i>
+					<i class="fa fa-comment-o"></i>
+					<i class="fa fa-bar-chart-o"></i>
+				</div>
+				<div class="duration">
+					<p class="current">00:00</p>
+					<div class="playTime">
+						<div class="playedTime"></div>
+						<span></span>
+					</div>
+					<p class="total">05:15</p>
+				</div>
+				<div class="playControlBtn">
+					<img src="image/seq.png" alt="">
+					<img src="image/prev.png" alt="">
+					<img ng-click="switchIcon()" ng-src="{{playPagePlayBtn || 'image/pause_hover.png'}}" alt="">
+					<img src="image/next.png" alt="">
+					<img src="image/list.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,615 @@
+body,
+ul,
+p,
+h4,
+h3,
+ol,
+div {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #666666;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666666;
+}
+img {
+  display: block;
+}
+@keyframes cdRotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+#fixedTop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f7f7f7;
+  z-index: 5;
+}
+header {
+  height: 1rem;
+  background-color: #CE3D3E;
+  align-items: center;
+  display: flex;
+}
+header img {
+  height: 0.8rem;
+}
+nav ul {
+  height: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+nav ul li {
+  font-size: 0.27rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  box-sizing: border-box;
+  flex: 0 0 25%;
+  text-align: center;
+}
+nav ul .active {
+  border-bottom: 0.05rem solid #ce3d3e;
+}
+nav ul .active a {
+  color: #CE3D3E;
+}
+#content {
+  padding-top: 1.4rem;
+}
+#banner {
+  width: 100%;
+}
+#banner img {
+  width: 100%;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 0.6rem;
+  padding: 0 0.21rem;
+}
+.title .title-left {
+  display: flex;
+  align-items: center;
+}
+.title .title-left img {
+  height: 0.4rem;
+  width: 0.4rem;
+}
+.title .title-left h3 {
+  font-size: 0.3rem;
+  padding-left: 0.08rem;
+  font-family: 'Microsoft Yahei';
+  font-weight: bold;
+}
+.title a {
+  font-size: 0.2rem;
+}
+.song-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.15rem;
+  justify-content: space-between;
+  min-height: 6.08rem;
+}
+.song-list li {
+  flex: 0 0 32%;
+  margin-bottom: 0.2rem;
+}
+.song-list li a {
+  display: block;
+}
+.song-list li a p {
+  font-size: 0.21rem;
+  color: #333;
+}
+.song-list li .pic {
+  position: relative;
+}
+.song-list li .pic img {
+  width: 100%;
+  display: block;
+}
+.song-list li .pic span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-size: 0.13rem;
+  padding: 0.02rem 0.05rem;
+  box-sizing: border-box;
+  text-align: right;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#mv {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.15rem;
+  justify-content: space-between;
+  min-height: 6.08rem;
+}
+#mv li {
+  flex: 0 0 32%;
+  margin-bottom: 0.2rem;
+}
+#mv li a {
+  display: block;
+}
+#mv li a p {
+  font-size: 0.21rem;
+  color: #333;
+}
+#mv li .pic {
+  position: relative;
+}
+#mv li .pic img {
+  width: 100%;
+  display: block;
+}
+#mv li .pic span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-size: 0.13rem;
+  padding: 0.02rem 0.05rem;
+  box-sizing: border-box;
+  text-align: right;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#mv li {
+  flex: 0 0 49%;
+  margin-bottom: 0;
+}
+footer {
+  height: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-bottom: 0.03rem solid #ce3d3e;
+}
+footer .info {
+  display: flex;
+  align-items: center;
+  padding-left: 0.08rem;
+}
+footer .info img {
+  height: 0.8rem;
+  width: 0.8rem;
+  display: block;
+}
+footer .info > div {
+  padding-left: 0.08rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 0.8rem;
+}
+footer .info > div h4 {
+  font-size: 0.3rem;
+  font-weight: normal;
+  color: #333;
+  white-space: nowrap;
+  max-width: 3.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+footer .info > div p {
+  font-size: 0.18rem;
+  white-space: nowrap;
+  max-width: 3.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+footer .play-btn {
+  display: flex;
+  justify-content: space-between;
+}
+footer .play-btn img {
+  height: 0.85rem;
+}
+.allList {
+  font-size: 0.3rem;
+  padding: 0.25rem 0 0.1rem 0.15rem;
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.15rem;
+  justify-content: space-between;
+  min-height: 6.08rem;
+}
+.list li {
+  flex: 0 0 32%;
+  margin-bottom: 0.2rem;
+}
+.list li a {
+  display: block;
+}
+.list li a p {
+  font-size: 0.21rem;
+  color: #333;
+}
+.list li .pic {
+  position: relative;
+}
+.list li .pic img {
+  width: 100%;
+  display: block;
+}
+.list li .pic span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-size: 0.13rem;
+  padding: 0.02rem 0.05rem;
+  box-sizing: border-box;
+  text-align: right;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.list li {
+  flex: 0 0 49%;
+}
+#listDetail .header {
+  padding: 0 0.3rem;
+  height: 1rem;
+  display: flex;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+#listDetail .header a {
+  color: #fff;
+  align-items: center;
+  display: flex;
+  font-size: 0.6rem;
+}
+#listDetail .header h3 {
+  font-size: 0.35rem;
+  font-weight: normal;
+  padding-left: 0.4rem;
+}
+#listDetail .cover {
+  width: 100%;
+  height: 4.5rem;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  align-items: flex-end;
+  padding: 0.6rem 0.4rem;
+  box-sizing: border-box;
+}
+#listDetail .cover .background {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  left: -25%;
+  top: -25%;
+  -webkit-filter: blur(30px) brightness(0.9);
+  z-index: 0;
+}
+#listDetail .cover .pic {
+  z-index: 1;
+  flex: 0 0 auto;
+  width: 30vw;
+  height: 30vw;
+  position: relative;
+}
+#listDetail .cover .pic img {
+  width: 100%;
+  height: 100%;
+}
+#listDetail .cover .pic span {
+  font-size: 0.25rem;
+  text-align: right;
+  color: #fff;
+  padding: 0.05rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+#listDetail .cover .name {
+  z-index: 1;
+  box-sizing: border-box;
+  padding-left: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  height: 2rem;
+}
+#listDetail .cover .name h4 {
+  font-size: 0.3rem;
+  color: #fff;
+  font-weight: normal;
+  padding-bottom: 0.2rem;
+}
+#listDetail .cover .name p {
+  font-size: 0.2rem;
+  display: flex;
+  align-items: center;
+}
+#listDetail .cover .name p a {
+  color: #ccc;
+}
+#listDetail .cover .name p img {
+  width: 0.5rem;
+  border-radius: 50%;
+  margin-right: 0.1rem;
+}
+.playall {
+  height: 0.9rem;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 0.15rem;
+  border-bottom: 0.01rem solid #eeeeee;
+}
+.playall a {
+  font-size: 0.18rem;
+  color: #000;
+  border-radius: 50%;
+  border: 0.02rem solid #000000;
+  width: 0.42rem;
+  height: 0.42rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0.04rem;
+  box-sizing: border-box;
+}
+.playall span {
+  font-size: 0.34rem;
+  padding-left: 0.15rem;
+}
+.playall span b {
+  color: #999;
+  font-weight: normal;
+  font-size: 0.3rem;
+}
+.songs li {
+  height: 1.1rem;
+}
+.songs a {
+  display: flex;
+  align-items: center;
+}
+.songs a .info {
+  display: flex;
+  height: 1.1rem;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding-right: 0.5rem;
+  overflow: hidden;
+  border-bottom: 0.01rem solid #eeeeee;
+}
+.songs a .song-name {
+  font-size: 0.3rem;
+  font-weight: lighter;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 0.5rem;
+  text-overflow: ellipsis;
+}
+.songs a .singer {
+  font-size: 0.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #aaa;
+  text-overflow: ellipsis;
+  padding-right: 0.5rem;
+}
+.songs a .index {
+  font-size: 0.2rem;
+  flex: 0 0 15%;
+  text-align: center;
+  color: #aaa;
+}
+#playPageBg {
+  -webkit-filter: blur(60px) brightness(0.7);
+}
+#box {
+  padding-bottom: 1.1rem;
+  background-color: #fefefe;
+}
+#playPage {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+#playPage img {
+  height: 100%;
+}
+#playPage .playPageContent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+#playPage .header {
+  padding: 0 0.3rem;
+  height: 1rem;
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  border-bottom: 0.02rem solid rgba(255, 255, 255, 0.3);
+}
+#playPage .header > div {
+  display: flex;
+}
+#playPage .header a {
+  color: #f7f7f7;
+  font-size: 0.8rem;
+}
+#playPage .header .playTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0.3rem;
+}
+#playPage .header .playTitle h4 {
+  font-size: 0.3rem;
+  font-weight: normal;
+  max-width: 4.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#playPage .header .playTitle p {
+  max-width: 4.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.15rem;
+  color: #ccc;
+}
+#playPage .header .shareBtn {
+  font-size: 0.5rem;
+}
+#playPage .playBody {
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+}
+#playPage .playBody .stickAndCd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#playPage .playBody .stick {
+  transition: all 0.8s;
+  height: 2.3rem;
+  margin-top: -6%;
+  transform: rotateZ(0deg);
+  transform-origin: 15px 15px;
+  margin-left: 20%;
+  z-index: 2;
+}
+#playPage .playBody .cdWrapper {
+  height: 5rem;
+  width: 5rem;
+  margin-top: -18%;
+  background: rgba(222, 222, 222, 0.2) url("../image/cd_wrapper.png") no-repeat center center / contain;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateZ(0deg);
+}
+#playPage .playBody .cdWrapper .coverImg {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  overflow: hidden;
+}
+#playPage .playBody .cdWrapper .coverImg img {
+  width: 3.3rem;
+  height: 3.3rem;
+  border-radius: 50%;
+}
+#playPage .playBody .playControl {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.6rem;
+}
+#playPage .playBody .playControl .likeDownloadAndComments {
+  font-size: 0.4rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 1.2rem;
+  color: #cecece;
+  font-weight: lighter;
+}
+#playPage .playBody .playControl .duration {
+  margin-top: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.2rem;
+  color: #cecece;
+  padding: 0 0.4rem;
+  align-items: center;
+}
+#playPage .playBody .playControl .duration .current {
+  color: #eee;
+}
+#playPage .playBody .playControl .duration .playTime {
+  height: 0.04rem;
+  background-color: #bbb;
+  border-radius: 0.02rem;
+  flex: 0 0 78%;
+  position: relative;
+}
+#playPage .playBody .playControl .duration .playTime .playedTime {
+  height: 0.04rem;
+  width: 3rem;
+  border-radius: 0.02rem;
+  background-color: #cb2d26;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#playPage .playBody .playControl .duration .playTime span {
+  width: 0.24rem;
+  height: 0.24rem;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: 3rem;
+  top: -0.1rem;
+}
+#playPage .playBody .playControl .playControlBtn {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 0.6rem;
+  margin-top: 0.2rem;
+}
+#playPage .playBody .playControl .playControlBtn img {
+  height: 1.1rem;
+}

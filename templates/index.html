@@ -1,0 +1,15 @@
+<div id="fixedTop">
+	<header>
+		<img src="image/logo.png" alt="">
+	</header>
+	<nav>
+		<ul>
+			<li ng-repeat="item in tabsView" class="{{item.isActive ? 'active' : ''}}" ng-click="changeTab($index)"><a ui-sref="{{item.sref}}">{{item.title}}</a></li>
+		</ul>
+	</nav>
+</div>
+
+<div id="content">
+	<div ui-view="findMusic"></div>
+	<div ui-view="list"></div>
+</div>

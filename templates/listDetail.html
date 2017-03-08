@@ -1,0 +1,35 @@
+<div id="listDetail">
+	<div class="header">
+		<a ng-click="goBack()"><i class="fa fa-angle-left"></i></a>
+		<h3>歌单</h3>
+	</div>
+	<div class="cover">
+		<div class="pic">
+			<img src="{{cover}}?param=230y230" alt="">
+			<span><i class="fa fa-headphones"></i>{{data.playCount}}</span>
+		</div>
+		<div class="name">
+			<h4>{{data.name}}</h4>
+			<p>
+				<img src="{{data.creator.avatarUrl}}?param=50y50" alt="">
+				<span><a href="javascript:;">{{data.creator.nickname}} ></a></span>
+			</p>
+		</div>
+		<img class="background" src="{{cover}}?param=230y230" alt="">
+	</div>
+	<div class="playall">
+		<a href="javascript:;"><i class="fa fa-play"></i></a>
+		<span>播放全部<b>(共{{data.tracks.length}}首)</b></span>
+	</div>
+	<ol class="songs">
+		<li ng-repeat="item in data.tracks">
+			<a href="javascript:;" ng-click="getMusic(item.id, item)">
+				<p class="index">{{$index + 1}}</p>
+				<div class="info">
+					<h4 class="song-name">{{item.name}}</h4>
+					<p class="singer">{{item['ar'][0].name + " - " + item['al'].name}}</p>
+				</div>
+			</a>
+		</li>
+	</ol>
+</div>

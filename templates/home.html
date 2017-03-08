@@ -1,0 +1,65 @@
+<section id="banner">
+	<img src="image/banner1.jpg" alt="">
+</section>
+<section class="title">
+	<div class="title-left">
+		<img src="image/aei.png" alt="">
+		<h3>推荐歌单</h3>
+	</div>
+	<a ui-sref="index.list" ng-click="changeTab(1)">更多></a>
+</section>
+<ul class="song-list">
+	<li ng-repeat="item in songlist">
+		<a ui-sref="listDetail({id: item.id, cover: item.coverImgUrl})">
+			<div class="pic">
+				<img src="{{item.coverImgUrl}}" alt="">
+				<span><i class="fa fa-headphones"></i> {{item.playCount}}</span>			</div>
+			<p>{{item.name}}</p>
+		</a>
+	</li>
+</ul>
+<section class="title">
+	<div class="title-left">
+		<img src="image/aee.png" alt="">
+		<h3>推荐MV</h3>
+	</div>
+	<a href="#/list">更多></a>
+</section>
+<ul id="mv">
+	<li>
+		<a href="#/detail?id=">
+			<div class="pic">
+				<img src="image/list%20(6).jpg" alt="">
+				<span>13万</span>
+			</div>
+			<p>老板,给我来一打这样的男朋友</p>
+		</a>
+	</li>
+	<li>
+		<a href="#/detail?id=">
+			<div class="pic">
+				<img src="image/list%20(8).jpg" alt="">
+				<span>13万</span>
+			</div>
+			<p>老板,给我来一打这样的男朋友</p>
+		</a>
+	</li>
+	<li>
+		<a href="#/detail?id=">
+			<div class="pic">
+				<img src="image/list%20(6).jpg" alt="">
+				<span>13万</span>
+			</div>
+			<p>老板,给我来一打这样的男朋友</p>
+		</a>
+	</li>
+	<li>
+		<a href="#/detail?id=">
+			<div class="pic">
+				<img src="image/list%20(8).jpg" alt="">
+				<span>13万</span>
+			</div>
+			<p>老板,给我来一打这样的男朋友</p>
+		</a>
+	</li>
+</ul>

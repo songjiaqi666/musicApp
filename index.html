@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>网易云音乐WEB</title>
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/base.css">
+	<script src="js/angular.js"></script>
+	<script src="js/angular-ui-router.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="indexCtrl">
+		<div id="box" ng-show="!isPlayPage">
+			<div ui-view="home"></div>
+			<div ui-view="listDetail"></div>
+		</div>
+		<div ui-view="play" ng-show="isPlayPage"></div>
+		<footer ng-show="musicJson.length != 0 && !isPlayPage">
+			<audio id="player"></audio>
+			<div class="info" ui-sref="play" ng-click="nowIsPlay()">
+				<a href="#"><img src="{{musicJson['al']['picUrl']}}" alt=""></a>
+				<div>
+					<h4>{{musicJson.name}}</h4>
+					<p>{{musicJson['ar'][0].name}}</p>
+				</div>
+			</div>
+			<div class="play-btn">
+				<img src="image/playbar_btn_playlist.png" alt="">
+				<img ng-src="{{playBtn}}" ng-click="switchIcon()">
+				<img src="image/playbar_btn_next.png" alt="">
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<h4 class="allList">全部歌单</h4>
+<ul class="list">
+	<li ng-repeat="item in songlist">
+		<a ui-sref="listDetail({id: item.id, cover: item.coverImgUrl})">
+			<div class="pic">
+				<img src="{{item.coverImgUrl}}" alt="">
+				<span>{{item.playCount}}</span>
+			</div>
+			<p>{{item.name}}</p>
+		</a>
+	</li>
+</ul>
